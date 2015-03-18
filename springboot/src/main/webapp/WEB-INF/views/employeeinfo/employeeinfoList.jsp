@@ -45,7 +45,7 @@
 	var employeeinfo_list_update_url =  '${ctx}/';
 	var employeeinfo_list_delete_url =  '${ctx}/delete';
 	var employeeinfo_list_view_url =  '${ctx}/employeeinfo/view/';
-	var employeeinfo_list_datagrid_load_url = '${ctx}/findList';
+	var employeeinfo_list_datagrid_load_url = '${ctx}/employeeinfo/findList';
 	
 	//定义相关的操作按钮
 	function employeeinfo_list_actionFormatter(value,row,index){

@@ -13,7 +13,7 @@
 		<ul>
 			<li><a data-options="plain:true" href="javascript:void(0)"
 				class="user easyui-linkbutton"
-				onclick="indexTabsAddTab('href',{title:'网页提取',url:'${ctx}/show',iconCls:'icon-page_find'})">
+				onclick="indexTabsAddTab('href',{title:'网页提取',url:'${ctx}/employeeinfo/show',iconCls:'icon-page_find'})">
 					<img
 					src="${ctx}/static/js/plugins/jquery-easyui-1.3.4/themes/icons/page_find.png" />&nbsp;EmpInfo
 			</a></li>

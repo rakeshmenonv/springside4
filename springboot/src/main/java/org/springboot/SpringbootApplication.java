@@ -2,9 +2,7 @@ package org.springboot;
 
 import java.util.Arrays;
 
-import org.springboot.config.ApplicationContext;
-import org.springboot.config.ServletContextConfig;
-import org.springboot.config.WebInitializer;
+import org.springboot.config.WebAppInitializer;
 import org.springframework.beans.factory.ListableBeanFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -18,7 +16,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @ComponentScan({"org.springboot"})
 @EnableAutoConfiguration
 @EnableJpaRepositories
-@Import({ApplicationContext.class, ServletContextConfig.class,WebInitializer.class})
+@Import({WebAppInitializer.class})
 public class SpringbootApplication {
 
     public static void main(String[] args) {

@@ -115,7 +115,7 @@ public class EmployeeInfoController extends BasicController {
 				logger.log(this.getClass(),Logger.ERROR_INT,"登陆帐号无效!","",null);
 			}*/
 		} catch (Exception ex) {
-			//logger.log(this.getClass(),Logger.ERROR_INT,ex.getMessage(),super.getLoginUser().getLoginName(),null);
+			logger.log(this.getClass(),Logger.ERROR_INT,ex.getMessage(),super.getLoginUser().getLoginName(),null);
 		}
 		return dataGrid;
 	}
