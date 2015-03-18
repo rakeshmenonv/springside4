@@ -33,14 +33,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
  * @author Rajesh
  *
  */
-
-//@ComponentScan(
-//	    basePackages = {"com.infotop","org.seagatesoft.sde"},
-//	    excludeFilters = @ComponentScan.Filter(
-//	       value= Controller.class, 
-//	       type = FilterType.ANNOTATION  org.springframework.web.bind.annotation.ControllerAdvice
-//	    )
-//	 )
 @Configuration 
 @ComponentScan(basePackages = { "com.infotop","org.seagatesoft.sde" },
 excludeFilters = { @Filter(type = FilterType.ANNOTATION,
@@ -53,27 +45,6 @@ public class ApplicationContext extends WebMvcConfigurerAdapter{
 
 	    @Autowired
 	    private DataSource dataSource;
-//	    @Bean
-//	    public AbstractEntityManagerFactoryBean  entityManagerFactoryRef() {
-//	        HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
-//	        vendorAdapter.setDatabasePlatform(org.springside.modules.persistence.Hibernates.getDialect(dataSource));
-//	        vendorAdapter.setShowSql(Boolean.TRUE);
-//	        LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
-//	        factory.setJpaVendorAdapter(vendorAdapter);
-//	        factory.setPackagesToScan("org.springboot.webharvest");
-//	        factory.setDataSource(dataSource);
-//	        factory.afterPropertiesSet();
-//	        factory.setLoadTimeWeaver(new InstrumentationLoadTimeWeaver());
-//	        return factory;
-//	 }
-//
-//	   @Bean
-//	    public PlatformTransactionManager transactionManager() {
-//	       
-//	        JpaTransactionManager txManager = new JpaTransactionManager();
-//	        txManager.setEntityManagerFactory(entityManagerFactoryRef().getObject());
-//	        return txManager;
-//	    }	
 	   @Bean
 	    public JdbcTemplate jdbcTemplate() {
 	        return new JdbcTemplate(dataSource);
